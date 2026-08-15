@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.typekit.net/cla7gaj.css");
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "nirmala-text", "Raleway", sans-serif;
+    color: white;
+     /* For Firefox */
+    scrollbar-width: none; 
+    /* For Internet Explorer and Legacy Edge */
+    -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media screen and (min-width: 600px) {
+    /* Header Style */
+        header {
+            position: sticky;
+            width: 100%;
+        }
+
+
+        .header-container {
+            display: flex;
+            justify-content: space-between; /* Pushes items to the opposite ends */
+            align-items: center;            /* Aligns items vertically in the center */
+            padding: 10px;                  /* Add some spacing */
+        }
+
+        .left-side {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-pic{
+            margin-bottom: 5px;
+        }
+
+        #name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 1000px;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            margin-right: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        a.active {
+            border-bottom: 2.5px solid white;
+            padding-bottom: 4px;
+        }
+
+
+        /* Background Video style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .video-background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .video-background-container video.bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            background-color: black;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-background-container video.bg-video.active {
+            opacity: 1;
+        }     
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* 40% black transparency */
+            z-index: 2;
+        }
+
+        /* 4. Content container positioned safely on top */
+        .content-layer {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* was: center */
+            align-items: center;
+            height: 100%;
+            overflow-y: auto;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content-layer h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+
+        /* Body Style */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgb(34, 34, 34);
+        }
+
+        .site-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .openinginfo {
+            display: grid;
+            grid-auto-flow: column;         /* Forces items to align horizontally */
+            place-items: end;            /* Centers items horizontally and vertically */
+            padding-bottom: 10%;
+        }
+
+        .opening h1 {
+            font-size: 6em;
+        }
+
+        #opening-header-1 {
+            padding-right: 30px;
+        }
+        #opening-header-2 {
+            padding-left: 30px;
+        }
+
+        .about {
+            position: fixed;   /* Locks the div to the viewport */
+            bottom: 0;         /* Aligns it to the exact bottom edge */
+            left: 0;           /* Stretches it from the left edge */
+            width: 100%;       /* Spans the full width of the screen */
+            background-color: white;
+            color: black;
+            text-align: center;
+            margin-top: -2.5%;
+        }
+
+        .about p {
+            padding: 30px;
+        }
+
+
+        #contact-box {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;     /* Centers vertically */
+            min-height: 80vh;       /* Takes up full screen height */
+            margin: 0;
+        }
+
+        #inner-contact-box {
+            border: 2px solid white;
+            padding: 50px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.507);
+        }
+
+        #connect-title{
+            font-family: "Raleway";
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        #border-box {
+            margin-left: auto;
+            margin-right: auto;
+            border-top: 0.1px solid white;
+            width: 50px;
+        }
+
+
+
+        /* Style for the project list section*/
+        .items {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        #itemList {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%; /* Also responsive */
+            text-align: center;
+        }
+
+        #itemList li {
+            margin-top: -1px; /* Prevent double borders */
+          /*background-color:rgba(0, 0, 0, 0.268);
+            padding: 5px; */
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .Videodiv {
+            text-align: center;
+        }
+
+        .DemoDiv {
+            text-align: center;
+        }
+
+        #DemoList {
+            width: 20%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        #VideoList {
+            width: 20%;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+
+
+        /* Footer Style */
+        footer {
+            display: flex;
+            flex-direction: column; /* Stacks items vertically in a column */
+            justify-content: center; /* Centers items vertically along the main axis */
+            align-items: center; /* Centers items horizontally along the cross axis */
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .footercontent {
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+
+        footer p {
+            margin: 5px 0 10px 0;
+        }
+
+        .totop {
+            text-align: right;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+/* Styling for phone screens */
+@media screen and (max-width: 600px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        background-color: rgb(34, 34, 34);
+    }
+
+    header {
+        position: sticky;
+        width: 100%;
+        border-bottom: 1.5px solid aqua;
+        padding-bottom: 4px;
+    }
+
+
+    .header-container {
+        display: flex;
+        justify-content: space-between; /* Pushes items to the opposite ends */
+        align-items: center;            /* Aligns items vertically in the center */
+        padding: 10px;                  /* Add some spacing */
+    }
+
+    .left-side {
+        display: flex;
+        align-items: center;
+    }
+
+    #name {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .active {
+        font-weight: bold;
+        color: rgb(164, 255, 255)
+    }
+
+    #loganPic {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    #demo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .opening {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-items: center; /* Vertically aligns the items (image and h1) in the center */
+        text-align: center;
+    }
+
+    .about {
+        text-align: center;
+        width: 50%;
+        margin-top: -2.5%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column; /* Stacks items vertically in a column */
+        justify-content: center; /* Centers items vertically along the main axis */
+        margin-top: 30px;
+        width: 100%;
+        font-size: small;
+    }
+
+    .footercontent {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .totop {
+        text-align: center;
+        padding-top: 20px;
+        font-weight: lighter;
+        font-size: x-small;
+    }
+
+}
