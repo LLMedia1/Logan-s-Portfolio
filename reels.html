@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Logan Ladell</title>
 </head>
-<body>
+<body class="reels-page">
 
     <div class="video-background-container">
         <video class="bg-video active" autoplay muted loop playsinline poster="Pictures/Website_Video_Poster.jpg">
@@ -20,13 +20,22 @@
             <section id="top"></section>
             <header>
                 <div class="header-container">
-                    <div class="logo-pic">
-                        <img src="Pictures/Logan Ladell Media Logo - White.png" alt="Brand Logo" width="50" height="50" id="logo"> 
+                    <div class="left-side">
+                        <div class="logo-pic">
+                            <img src="Pictures/Logan Ladell Media Logo - White.png" alt="Brand Logo" width="50" height="50" id="logo">
+                        </div>
+                        <div class="left">
+                            <h1 id="name">LOGAN LADELL MEDIA</h1>
+                        </div>  
                     </div>
-                    <div class="left">
-                        <h1 id="name">LOGAN LADELL MEDIA</h1>
-                    </div>
-                    <div class="right">
+
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="right" id="navMenu">
                         <nav>
                             <a  href="index.html">HOME</a>
                             <a href="about.html">ABOUT</a>
