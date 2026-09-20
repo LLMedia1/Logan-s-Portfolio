@@ -224,7 +224,6 @@ body {
 }
 
 .openinginfo img {
-    width: clamp(120px, 16vw, 300px);
     height: auto;
     flex-shrink: 0;
 }
